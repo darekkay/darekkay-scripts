@@ -1,5 +1,9 @@
 # @darekkay/scripts
 
+[![npm (scoped)](https://img.shields.io/npm/v/@darekkay/scripts?style=flat-square)](https://www.npmjs.com/package/@darekkay/scripts)
+[![Build](https://img.shields.io/github/workflow/status/darekkay/darekkay-scripts/Continuous%20Integration/master?style=flat-square)](https://github.com/darekkay/darekkay-scripts/actions)
+[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/darekkay/darekkay-scripts/blob/master/LICENSE)
+
 A CLI that abstracts away all configuration for my projects (linting, testing, building, ...). Inspired by [react-scripts](https://www.npmjs.com/package/react-scripts) and [kcd-scripts](https://www.npmjs.com/package/kcd-scripts).
 
 ## Usage
