@@ -1,6 +1,6 @@
 # @darekkay/scripts
 
-A CLI that abstracts away all configuration for my projects (linting, testing, building, ...). Inspired by [react-scripts](https://www.npmjs.com/package/react-scripts) and [kcd-scripts](https://www.npmjs.com/package/kcd-scripts)
+A CLI that abstracts away all configuration for my projects (linting, testing, building, ...). Inspired by [react-scripts](https://www.npmjs.com/package/react-scripts) and [kcd-scripts](https://www.npmjs.com/package/kcd-scripts).
 
 ## Usage
 
@@ -28,3 +28,7 @@ Some additional utilities are included:
 
 - [cross-env](https://www.npmjs.com/package/cross-env)
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all)
+
+## License
+
+This project and its contents are open source under the [MIT license](LICENSE).
