@@ -12,3 +12,4 @@ storybook-static/
 
 *.min.js
 *.hbs
+*.html
