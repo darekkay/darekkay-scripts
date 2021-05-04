@@ -1,7 +1,7 @@
 {
   "name": "@darekkay/scripts",
   "description": "My shared project scripts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Darek Kay <hello@darekkay.com> (https://darekkay.com/)",
   "bin": {
     "dks": "bin/dks.js"
@@ -11,7 +11,7 @@
     "email": "hello@darekkay.com"
   },
   "dependencies": {
-    "@darekkay/eslint-config": "2.6.3",
+    "@darekkay/eslint-config": "2.6.4",
     "@darekkay/logger": "1.1.2",
     "arrify": "2.0.1",
     "cross-env": "7.0.3",

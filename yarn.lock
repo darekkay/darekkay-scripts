@@ -326,10 +326,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@darekkay/eslint-config@2.6.2":
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-2.6.2.tgz#4d265458ec78b0fa3f5a6a4449c19090e5ca2e38"
-  integrity sha512-N7M1NyMXq0ij9LKqPsfBOgJKsbYIoQd5PfRN1aoPrB2YWBo0FxnDMhIxePKVvT4EtVp4Q0iQy7VROKmuheWYDA==
+"@darekkay/eslint-config@2.6.4":
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-2.6.4.tgz#e9eb98d222a95d4c3764a8332cb81bee080dcb3f"
+  integrity sha512-zetC1BVgtj+PxLpV/p4rRCDwmcP5HTVg3hTxkpRHKQm7mwhL8A9rfuytyoiRBH+9j+qGHsQSkZSFM6LEBoEGEg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.22.0"
     "@typescript-eslint/parser" "4.22.0"
@@ -4862,11 +4862,6 @@ typedarray-to-buffer@^3.1.5:
   integrity sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
   dependencies:
     is-typedarray "^1.0.0"
-
-typescript@4.2.4:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
-  integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
 
 unbox-primitive@^1.0.0:
   version "1.0.1"
