@@ -11,9 +11,16 @@
     "email": "hello@darekkay.com"
   },
   "dependencies": {
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
+    "@babel/preset-react": "7.13.13",
+    "@babel/preset-typescript": "7.13.0",
     "@darekkay/eslint-config": "2.6.4",
     "@darekkay/logger": "1.1.2",
     "arrify": "2.0.1",
+    "babel-jest": "26.6.3",
+    "babel-preset-vite": "1.0.4",
+    "camelcase": "6.2.0",
     "cross-env": "7.0.3",
     "cross-spawn": "7.0.3",
     "glob": "7.1.6",
@@ -24,6 +31,9 @@
     "read-pkg-up": "7.0.1",
     "which": "2.0.2",
     "yargs-parser": "20.2.7"
+  },
+  "devDependencies": {
+    "@types/eslint": "7.2.10"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -39,8 +49,8 @@
     "eslint",
     "eslintconfig",
     "lint",
-    "test",
-    "react-scripts"
+    "react-scripts",
+    "test"
   ],
   "license": "MIT",
   "main": "bin/dks.js",

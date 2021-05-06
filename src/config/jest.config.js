@@ -4,7 +4,12 @@ const { ifAnyDep, hasFile, hasPkgProp, fromRoot } = require("../utils");
 
 const here = (p) => path.join(__dirname, p);
 
-// const useBuiltInBabelConfig = !hasFile(".babelrc") && !hasPkgProp("babel");
+const useBuiltInBabelConfig =
+  !hasFile(".babelrc") &&
+  !hasFile(".babelrc.js") &&
+  !hasFile("babel.config.json") &&
+  !hasFile("babel.config.js") &&
+  !hasPkgProp("babel");
 
 const ignores = [
   "/node_modules/",
@@ -17,8 +22,11 @@ const ignores = [
   "/build/",
 ];
 
+/** @type {import('@jest/types').Config.InitialOptions} */
 const jestConfig = {
   roots: [fromRoot("src")],
+
+  modulePaths: [fromRoot("src")],
 
   testEnvironment: ifAnyDep(
     ["webpack", "rollup", "react", "preact"],
@@ -52,10 +60,15 @@ for (const setupFile of setupFiles) {
   }
 }
 
-// if (useBuiltInBabelConfig) {
-//   jestConfig.transform = {
-//     "^.+\\.(js|jsx|ts|tsx)$": here("./babel-transform"),
-//   };
-// }
+if (useBuiltInBabelConfig) {
+  jestConfig.transform = {
+    "^.+\\.(js|jsx|ts|tsx)$": here("./jest/transforms/babel-transform"),
+    "^.+\\.css$": here("./jest/transforms/css-transform"),
+    "^.+\\.svg$": here("./jest/transforms/svg-transform"),
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|svg|json)$)": here(
+      "./jest/transforms/file-transform"
+    ),
+  };
+}
 
 module.exports = jestConfig;

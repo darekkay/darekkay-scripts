@@ -1,5 +1,6 @@
 const { ifAnyDep, ifTypescript } = require("../utils");
 
+/** @type {import('@types/eslint').Linter.BaseConfig} */
 module.exports = {
   extends: [
     require.resolve("@darekkay/eslint-config/base"),
