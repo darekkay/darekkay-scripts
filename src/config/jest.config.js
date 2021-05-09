@@ -63,9 +63,9 @@ for (const setupFile of setupFiles) {
 if (useBuiltInBabelConfig) {
   jestConfig.transform = {
     "^.+\\.(js|jsx|ts|tsx)$": here("./jest/transforms/babel-transform"),
-    "^.+\\.css$": here("./jest/transforms/css-transform"),
+    "^.+\\.(css|scss)$": here("./jest/transforms/css-transform"),
     "^.+\\.svg$": here("./jest/transforms/svg-transform"),
-    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|svg|json)$)": here(
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|scss|svg|json)$)": here(
       "./jest/transforms/file-transform"
     ),
   };
