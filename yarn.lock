@@ -1003,10 +1003,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@darekkay/eslint-config@2.6.4":
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-2.6.4.tgz#e9eb98d222a95d4c3764a8332cb81bee080dcb3f"
-  integrity sha512-zetC1BVgtj+PxLpV/p4rRCDwmcP5HTVg3hTxkpRHKQm7mwhL8A9rfuytyoiRBH+9j+qGHsQSkZSFM6LEBoEGEg==
+"@darekkay/eslint-config@2.6.5":
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-2.6.5.tgz#27b94c63aee9128398f8dc91aae51316c5e6ec28"
+  integrity sha512-ahi/7/j9+r37xEFKqP/jubtfFKRIy4dk23ekXbA3937uM4fyAmHqy8XB8WQTMs+4m/RzCoWzb+NTPT9t31FlCA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.22.0"
     "@typescript-eslint/parser" "4.22.0"
