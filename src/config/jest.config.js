@@ -38,6 +38,11 @@ const jestConfig = {
   testPathIgnorePatterns: [...ignores],
   coveragePathIgnorePatterns: [...ignores, "src/(umd|cjs|esm)-entry.js$"],
 
+  // allow transforming (s)css files from node_modules
+  transformIgnorePatterns: [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+  ],
+
   coverageThreshold: {
     global: {
       branches: 85,
