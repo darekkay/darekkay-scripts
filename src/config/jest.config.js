@@ -15,6 +15,7 @@ const ignores = [
   "/node_modules/",
   "/__fixtures__/",
   "/fixtures/",
+  "/__stories__/",
   "/__tests__/helpers/",
   "/__tests__/utils/",
   "__mocks__",
