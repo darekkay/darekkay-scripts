@@ -11,8 +11,8 @@ logger.info("Running [ci]");
 const scripts = [
   "--continue-on-error",
   ifScript("typecheck", "typecheck"),
-  ifScript("lint", "lint --no-fix"),
-  ifScript("test", "test --silent"),
+  ifScript("lint", "lint -- --no-fix"),
+  ifScript("test", "test -- --silent"),
 ].filter(Boolean);
 
 if (scripts.length === 0) {
