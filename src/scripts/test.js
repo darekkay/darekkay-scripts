@@ -1,6 +1,6 @@
 const logger = require("@darekkay/logger");
 
-const { hasPkgProp, hasFile } = require("../utils");
+const { isCI, hasPkgProp, hasFile } = require("../utils");
 
 process.env.BABEL_ENV = "test";
 process.env.NODE_ENV = "test";
@@ -24,6 +24,12 @@ if (useBuiltinConfig) {
     "--config",
     JSON.stringify(require("../config/jest.config"))
   );
+}
+
+// silent output
+
+if (isCI()) {
+  jestArguments.push("--silent");
 }
 
 // script arguments

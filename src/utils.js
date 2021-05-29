@@ -61,6 +61,11 @@ function parseEnv(name, def) {
   return def;
 }
 
+function isCI() {
+  const ci = process.env.CI;
+  return ci === "true" || ci === true;
+}
+
 function uniq(arr) {
   return [...new Set(arr)];
 }
@@ -108,6 +113,7 @@ module.exports = {
   ifFile,
   ifPeerDep,
   ifScript,
+  isCI,
   hasTypescript,
   ifTypescript,
   parseEnv,

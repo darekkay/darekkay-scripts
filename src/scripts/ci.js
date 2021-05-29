@@ -10,9 +10,11 @@ logger.info("Running [ci]");
 
 const scripts = [
   "--continue-on-error",
+
+  // note: passing script arguments without "--" doesn't work and with "--" you'll get yarn warnings
   ifScript("typecheck", "typecheck"),
-  ifScript("lint", "lint -- --no-fix"),
-  ifScript("test", "test -- --silent"),
+  ifScript("lint", "lint"),
+  ifScript("test", "test"),
 ].filter(Boolean);
 
 if (scripts.length === 0) {

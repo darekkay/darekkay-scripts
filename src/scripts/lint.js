@@ -3,7 +3,7 @@ const path = require("path");
 const spawn = require("cross-spawn");
 const logger = require("@darekkay/logger");
 
-const { hasPkgProp, resolveBin, hasFile, fromRoot } = require("../utils");
+const { isCI, hasPkgProp, resolveBin, hasFile, fromRoot } = require("../utils");
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
 logger.info("Running [lint]");
@@ -57,7 +57,7 @@ if (!args.includes("--no-cache")) {
 
 // fix
 
-if (!args.includes("--no-fix")) {
+if (!args.includes("--no-fix") && !isCI()) {
   eslintArguments.push("--fix");
 }
 
