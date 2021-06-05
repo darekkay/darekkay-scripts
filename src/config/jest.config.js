@@ -44,6 +44,9 @@ const jestConfig = {
     "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
   ],
 
+  // automatically reset mock state before every test
+  resetMocks: true,
+
   coverageThreshold: {
     global: {
       branches: 85,
