@@ -25,7 +25,7 @@ const ignores = [
 
 /** @type {import('@jest/types').Config.InitialOptions} */
 const jestConfig = {
-  roots: [fromRoot("src")],
+  roots: [fromRoot("src"), fromRoot("bin")],
 
   modulePaths: [fromRoot("src")],
 
