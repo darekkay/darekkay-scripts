@@ -25,7 +25,10 @@ const ignores = [
 
 /** @type {import('@jest/types').Config.InitialOptions} */
 const jestConfig = {
-  roots: [fromRoot("src"), fromRoot("bin")],
+  // jest will fail if a root folder is missing (since v27)
+  roots: ["src", "bin"]
+    .filter((folder) => hasFile(folder))
+    .map((folder) => fromRoot(folder)),
 
   modulePaths: [fromRoot("src")],
 
