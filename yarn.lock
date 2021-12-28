@@ -1355,17 +1355,17 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@darekkay/eslint-config@2.8.0":
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-2.8.0.tgz#7e7c6b13f9d7004b500d4456866262c68da93b69"
-  integrity sha512-EWJyV61FG/yQdDwYI9ybv/9drGCgoJWf0r5M+beiTLuF2RmPnndL/bxvUzEoKwkM5pANK3FjuBvXJjYhXVyNDw==
+"@darekkay/eslint-config@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-2.8.1.tgz#745437f211420466f7c0542478bb977b02584cbc"
+  integrity sha512-AqYhRZHEhT1t5KMu0ECkT3Qc+xWrfwNe548KM4vmIicJa7j/+AUBaqA8mFgtMkgX03do2lpE2WWQpYc8YHqUgw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "5.8.1"
     "@typescript-eslint/parser" "5.8.1"
     eslint "8.5.0"
     eslint-config-prettier "8.3.0"
     eslint-plugin-import "2.25.3"
-    eslint-plugin-jest "25.3.0"
+    eslint-plugin-jest "25.3.2"
     eslint-plugin-jest-dom "4.0.0"
     eslint-plugin-jsx-a11y "6.5.1"
     eslint-plugin-node "11.1.0"
@@ -2739,10 +2739,10 @@ eslint-plugin-jest-dom@4.0.0:
     "@testing-library/dom" "^7.31.2"
     requireindex "^1.2.0"
 
-eslint-plugin-jest@25.3.0:
-  version "25.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-25.3.0.tgz#6c04bbf13624a75684a05391a825b58e2e291950"
-  integrity sha512-79WQtuBsTN1S8Y9+7euBYwxIOia/k7ykkl9OCBHL3xuww5ecursHy/D8GCIlvzHVWv85gOkS5Kv6Sh7RxOgK1Q==
+eslint-plugin-jest@25.3.2:
+  version "25.3.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-25.3.2.tgz#702801e37c502546fe4c4986888720f6eed3b129"
+  integrity sha512-1aPC7RRJkMCNgklHMDECw8fnzag3JBH53LaxmFkDTR7+PfMCO5V6f8XFRHoT2I+Fr4pVO9cPdRGlf7/haB2O5Q==
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.0.0"
 
