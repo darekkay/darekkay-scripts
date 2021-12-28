@@ -1,3 +1,5 @@
+/* eslint-disable jest/require-hook */
+
 const logger = require("@darekkay/logger");
 
 const { isCI, hasPkgProp, hasFile } = require("../utils");
