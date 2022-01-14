@@ -56,6 +56,7 @@
   ],
   "license": "MIT",
   "main": "bin/dks.js",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/darekkay/darekkay-scripts.git"
