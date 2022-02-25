@@ -30,4 +30,4 @@ const result = spawn.sync(resolveBin("npm-run-all"), scripts, {
   stdio: "inherit",
 });
 
-process.exit(result);
+process.exit(result.status);
