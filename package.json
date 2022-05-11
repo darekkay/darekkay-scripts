@@ -11,31 +11,31 @@
     "email": "hello@darekkay.com"
   },
   "dependencies": {
-    "@babel/core": "7.17.8",
+    "@babel/core": "7.17.10",
     "@babel/plugin-proposal-class-properties": "7.16.7",
-    "@babel/preset-env": "7.16.11",
+    "@babel/preset-env": "7.17.10",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
-    "@darekkay/eslint-config": "2.9.0",
-    "@darekkay/logger": "1.2.0",
-    "@jest/types": "27.5.1",
+    "@darekkay/eslint-config": "3.0.0",
+    "@darekkay/logger": "2.0.0",
+    "@jest/types": "28.1.0",
     "arrify": "2.0.1",
-    "babel-jest": "27.5.1",
+    "babel-jest": "28.1.0",
     "babel-preset-vite": "1.0.4",
     "camelcase": "6.3.0",
     "cross-env": "7.0.3",
     "cross-spawn": "7.0.3",
-    "glob": "7.2.0",
-    "jest": "27.5.1",
+    "glob": "8.0.1",
+    "jest": "28.1.0",
     "lodash.has": "4.5.2",
     "npm-run-all": "4.1.5",
-    "prettier": "2.6.1",
+    "prettier": "2.6.2",
     "read-pkg-up": "7.0.1",
     "which": "2.0.2",
     "yargs-parser": "21.0.1"
   },
   "devDependencies": {
-    "@types/eslint": "8.4.1"
+    "@types/eslint": "8.4.2"
   },
   "engines": {
     "node": ">=12.22.0"

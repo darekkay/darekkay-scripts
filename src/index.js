@@ -4,10 +4,14 @@ const spawn = require("cross-spawn");
 const glob = require("glob");
 const logger = require("@darekkay/logger");
 
+// https://github.com/isaacs/node-glob/issues/467#issuecomment-1114240501
+const scriptsGlobPattern = path
+  .join(__dirname, "scripts", "*")
+  .split(path.sep)
+  .join("/");
+
 const availableScripts = new Set(
-  glob
-    .sync(path.join(__dirname, "scripts", "*"))
-    .map((script) => path.basename(script, ".js"))
+  glob.sync(scriptsGlobPattern).map((script) => path.basename(script, ".js"))
 );
 
 if (process.argv.length < 3) {
