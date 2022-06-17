@@ -16,7 +16,9 @@ if (!hasAnyDep("typescript") || !hasFile("tsconfig.json")) {
 
 // only check types
 
-const typescriptArguments = ["--noEmit"];
+const typescriptArguments = [
+  "--noEmit --incremental --tsBuildInfoFile node_modules/.tsbuildinfo",
+];
 
 // script arguments
 
