@@ -1,4 +1,4 @@
 {
   "upgrade": true,
-  "reject": ["arrify", "read-pkg-up"]
+  "reject": ["arrify", "camelcase", "read-pkg-up"]
 }
