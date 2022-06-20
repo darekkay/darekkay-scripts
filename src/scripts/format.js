@@ -13,7 +13,7 @@ const args = process.argv.slice(2);
 const here = (p) => path.join(__dirname, p);
 const hereRelative = (p) => here(p).replace(process.cwd(), ".");
 
-const prettierArguments = [];
+const prettierArguments = ["--cache"];
 
 // prettierignore
 
@@ -25,6 +25,13 @@ if (useBuiltinIgnore) {
     "--ignore-path",
     hereRelative("../config/prettierignore")
   );
+}
+
+// log level
+
+if (!args.some((arg) => arg.includes("--loglevel"))) {
+  // hide affected files from the console by default
+  prettierArguments.push("--loglevel=warn");
 }
 
 // write
