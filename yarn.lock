@@ -1513,10 +1513,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@darekkay/eslint-config@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-3.1.0.tgz#92426a72b9f04b0e5b46476822b561d4c9ec11ca"
-  integrity sha512-lweFfusVPMjKP11nCE/pxD9+ntW/lm02a+XDjJb32eOH2TH/ABhKRb0pBjOgb50jzyIB88BkYGQYgiNK3l7hYQ==
+"@darekkay/eslint-config@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@darekkay/eslint-config/-/eslint-config-3.1.1.tgz#a558ab1151adcb557b97fb9b8bff294a4a789fed"
+  integrity sha512-P3CUBLhvHXG/cfBVAKuYm0N3ekGWNEZpUks3aitTEWkmu4IytTj6PKZ1jx6TsrBRVYusLr6y1wPQD2HJvbLQig==
   dependencies:
     "@typescript-eslint/eslint-plugin" "5.29.0"
     "@typescript-eslint/parser" "5.29.0"

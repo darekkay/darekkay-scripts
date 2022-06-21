@@ -16,7 +16,7 @@
     "@babel/preset-env": "7.18.2",
     "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
-    "@darekkay/eslint-config": "3.1.0",
+    "@darekkay/eslint-config": "3.1.1",
     "@darekkay/logger": "2.0.0",
     "@jest/types": "28.1.1",
     "arrify": "2.0.1",
