@@ -20,7 +20,7 @@ const typescriptArguments = [
   "--noEmit",
   "--incremental",
   "--tsBuildInfoFile",
-  "node_modules/.tsbuildinfo",
+  "node_modules/.cache/.tsbuildinfo",
 ];
 
 // script arguments
