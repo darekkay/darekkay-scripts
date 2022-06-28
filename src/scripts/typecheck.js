@@ -1,12 +1,12 @@
 const spawn = require("cross-spawn");
 const logger = require("@darekkay/logger");
 
-const { hasAnyDep, resolveBin, hasFile } = require("../utils");
+const { hasAnyDep, resolveBin, hasFile, handleResult } = require("../utils");
 
 const args = process.argv.slice(2);
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
-logger.info("Running [typecheck]");
+logger.info("[typecheck] started");
 
 if (!hasAnyDep("typescript") || !hasFile("tsconfig.json")) {
   throw new Error(
@@ -39,4 +39,4 @@ const result = spawn.sync(
   }
 );
 
-process.exit(result.status);
+handleResult("typecheck", result.status);

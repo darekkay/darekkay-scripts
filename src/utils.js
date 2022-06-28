@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+const logger = require("@darekkay/logger");
 const arrify = require("arrify");
 const has = require("lodash.has");
 const readPackageUp = require("read-pkg-up");
@@ -99,6 +100,15 @@ function resolveBin(
   }
 }
 
+function handleResult(task, status) {
+  if (status !== 0) {
+    logger.error(`[${task}] failed`);
+  } else {
+    logger.success(`[${task}] finished successfully`);
+  }
+  process.exit(status);
+}
+
 module.exports = {
   appDirectory,
   fromRoot,
@@ -119,4 +129,5 @@ module.exports = {
   parseEnv,
   resolveBin,
   uniq,
+  handleResult,
 };

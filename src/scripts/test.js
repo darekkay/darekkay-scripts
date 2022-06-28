@@ -2,13 +2,13 @@
 
 const logger = require("@darekkay/logger");
 
-const { isCI, hasPkgProp, hasFile } = require("../utils");
+const { isCI, hasPkgProp, hasFile, handleResult } = require("../utils");
 
 process.env.BABEL_ENV = "test";
 process.env.NODE_ENV = "test";
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
-logger.info("Running [test]");
+logger.info("[test] started");
 
 const args = process.argv.slice(2);
 
@@ -42,5 +42,15 @@ jestArguments.push(...args);
 
 logger.debug("Arguments", jestArguments);
 
+let resultStatus = 0;
+
 // eslint-disable-next-line jest/no-jest-import
-require("jest").run(jestArguments);
+require("jest")
+  .run(jestArguments)
+  .catch((error) => {
+    logger.error(error);
+    resultStatus = 1;
+  })
+  .finally(() => {
+    handleResult("test", resultStatus);
+  });

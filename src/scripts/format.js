@@ -3,10 +3,10 @@ const path = require("path");
 const spawn = require("cross-spawn");
 const logger = require("@darekkay/logger");
 
-const { isCI, resolveBin, hasFile } = require("../utils");
+const { isCI, resolveBin, hasFile, handleResult } = require("../utils");
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
-logger.info("Running [format]");
+logger.info("[format] started");
 
 const args = process.argv.slice(2);
 
@@ -66,4 +66,4 @@ const result = spawn.sync(resolveBin("prettier"), prettierArguments, {
   stdio: "inherit",
 });
 
-process.exit(result.status);
+handleResult("format", result.status);

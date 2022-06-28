@@ -1,12 +1,12 @@
 const spawn = require("cross-spawn");
 const logger = require("@darekkay/logger");
 
-const { resolveBin, ifScript } = require("../utils");
+const { resolveBin, ifScript, handleResult } = require("../utils");
 
 process.env.CI = "true";
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
-logger.info("Running [ci]");
+logger.info("[ci] started");
 
 const scripts = [
   "--continue-on-error",
@@ -31,4 +31,4 @@ const result = spawn.sync(resolveBin("npm-run-all"), scripts, {
   stdio: "inherit",
 });
 
-process.exit(result.status);
+handleResult("ci", result.status);

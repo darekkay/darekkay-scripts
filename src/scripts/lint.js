@@ -3,10 +3,17 @@ const path = require("path");
 const spawn = require("cross-spawn");
 const logger = require("@darekkay/logger");
 
-const { isCI, hasPkgProp, resolveBin, hasFile, fromRoot } = require("../utils");
+const {
+  isCI,
+  hasPkgProp,
+  resolveBin,
+  hasFile,
+  fromRoot,
+  handleResult,
+} = require("../utils");
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
-logger.info("Running [lint]");
+logger.info("[lint] started");
 
 const args = process.argv.slice(2);
 
@@ -77,4 +84,4 @@ const result = spawn.sync(resolveBin("eslint"), eslintArguments, {
   stdio: "inherit",
 });
 
-process.exit(result.status);
+handleResult("lint", result.status);
