@@ -13,13 +13,14 @@ const scripts = [
 
   // note: passing script arguments without "--" doesn't work and with "--" you'll get yarn warnings
   ifScript("typecheck", "typecheck"),
+  ifScript("format", "format"),
   ifScript("lint", "lint"),
   ifScript("test", "test"),
 ].filter(Boolean);
 
 if (scripts.length === 0) {
   logger.warn("None of the supported npm scripts is present.");
-  process.exit(0);
+  process.exit(1);
 }
 
 // run all valid scripts

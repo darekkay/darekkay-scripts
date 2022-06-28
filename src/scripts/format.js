@@ -3,7 +3,7 @@ const path = require("path");
 const spawn = require("cross-spawn");
 const logger = require("@darekkay/logger");
 
-const { resolveBin, hasFile } = require("../utils");
+const { isCI, resolveBin, hasFile } = require("../utils");
 
 logger.setLevel(process.env.DEBUG ? "debug" : "info");
 logger.info("Running [format]");
@@ -13,7 +13,7 @@ const args = process.argv.slice(2);
 const here = (p) => path.join(__dirname, p);
 const hereRelative = (p) => here(p).replace(process.cwd(), ".");
 
-const prettierArguments = ["--cache"];
+const prettierArguments = [];
 
 // prettierignore
 
@@ -27,6 +27,14 @@ if (useBuiltinIgnore) {
   );
 }
 
+// cache
+
+if (!isCI()) {
+  // TODO: remove this code when the following issue is fixed
+  // https://github.com/prettier/prettier/issues/13015
+  prettierArguments.push("--cache");
+}
+
 // log level
 
 if (!args.some((arg) => arg.includes("--loglevel"))) {
@@ -34,10 +42,12 @@ if (!args.some((arg) => arg.includes("--loglevel"))) {
   prettierArguments.push("--loglevel=warn");
 }
 
-// write
+// write vs. list
 
-if (!args.includes("--no-write")) {
+if (!args.includes("--no-write") && !isCI()) {
   prettierArguments.push("--write");
+} else {
+  prettierArguments.push("--check");
 }
 
 // script arguments
