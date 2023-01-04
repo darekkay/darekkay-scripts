@@ -44,7 +44,7 @@ logger.debug("Arguments", jestArguments);
 
 let resultStatus = 0;
 
-// eslint-disable-next-line jest/no-jest-import
+// eslint-disable-next-line
 require("jest")
   .run(jestArguments)
   .catch((error) => {
