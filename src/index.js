@@ -1,7 +1,7 @@
 const path = require("path");
 
 const spawn = require("cross-spawn");
-const glob = require("glob");
+const { globSync } = require("glob");
 const logger = require("@darekkay/logger");
 
 // https://github.com/isaacs/node-glob/issues/467#issuecomment-1114240501
@@ -11,7 +11,7 @@ const scriptsGlobPattern = path
   .join("/");
 
 const availableScripts = new Set(
-  glob.sync(scriptsGlobPattern).map((script) => path.basename(script, ".js"))
+  globSync(scriptsGlobPattern).map((script) => path.basename(script, ".js"))
 );
 
 if (process.argv.length < 3) {
