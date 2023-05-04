@@ -15,7 +15,8 @@ const availableScripts = new Set(
 );
 
 if (process.argv.length < 3) {
-  logger.error("Unspecified script.");
+  logger.error("Specify a script to run.");
+  logger.info(`Available scripts: ${[...availableScripts].sort().join(", ")}`);
   process.exit(1);
 }
 
