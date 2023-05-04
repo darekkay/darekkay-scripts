@@ -24,10 +24,16 @@ const eslintArguments = [];
 
 // config file
 
+// TODO: adjust for ESLint 9
+// https://eslint.org/docs/latest/use/configure/configuration-files-new
 const useBuiltinConfig =
   !args.includes("--config") &&
   !hasFile(".eslintrc") &&
   !hasFile(".eslintrc.js") &&
+  !hasFile(".eslintrc.cjs") &&
+  !hasFile(".eslintrc.json") &&
+  !hasFile(".eslintrc.yml") &&
+  !hasFile(".eslintrc.yaml") &&
   !hasPkgProp("eslintConfig");
 
 if (useBuiltinConfig) {
