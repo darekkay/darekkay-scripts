@@ -19,6 +19,10 @@ const jestArguments = [];
 const useBuiltinConfig =
   !args.includes("--config") &&
   !hasFile("jest.config.js") &&
+  !hasFile("jest.config.ts") &&
+  !hasFile("jest.config.cjs") &&
+  !hasFile("jest.config.mjs") &&
+  !hasFile("jest.config.json") &&
   !hasPkgProp("jest");
 
 if (useBuiltinConfig) {
