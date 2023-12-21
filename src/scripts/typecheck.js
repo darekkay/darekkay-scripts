@@ -10,7 +10,7 @@ logger.info("[typecheck] started");
 
 if (!hasAnyDep("typescript") || !hasFile("tsconfig.json")) {
   throw new Error(
-    "The 'typecheck' script requires typescript to be installed and tsconfig.json to be present."
+    "The 'typecheck' script requires typescript to be installed and tsconfig.json to be present.",
   );
 }
 
@@ -36,7 +36,7 @@ const result = spawn.sync(
   typescriptArguments,
   {
     stdio: "inherit",
-  }
+  },
 );
 
 handleResult("typecheck", result.status);

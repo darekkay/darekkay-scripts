@@ -73,7 +73,7 @@ function uniq(arr) {
 
 function resolveBin(
   modName,
-  { executable = modName, cwd = process.cwd() } = {}
+  { executable = modName, cwd = process.cwd() } = {},
 ) {
   let pathFromWhich;
   try {

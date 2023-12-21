@@ -35,7 +35,7 @@ const jestConfig = {
   testEnvironment: ifAnyDep(
     ["webpack", "rollup", "react", "preact"],
     "jsdom",
-    "node"
+    "node",
   ),
 
   collectCoverageFrom: ["src/**/*.+(js|jsx|ts|tsx)"],
@@ -77,7 +77,7 @@ if (useBuiltInBabelConfig) {
     "^.+\\.(css|scss)$": here("./jest/transforms/css-transform"),
     "^.+\\.svg$": here("./jest/transforms/svg-transform"),
     "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|scss|svg|json)$)": here(
-      "./jest/transforms/file-transform"
+      "./jest/transforms/file-transform",
     ),
   };
 }

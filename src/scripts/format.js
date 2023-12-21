@@ -23,7 +23,7 @@ const useBuiltinIgnore =
 if (useBuiltinIgnore) {
   prettierArguments.push(
     "--ignore-path",
-    hereRelative("../config/prettierignore")
+    hereRelative("../config/prettierignore"),
   );
 }
 
@@ -37,9 +37,9 @@ if (!isCI()) {
 
 // log level
 
-if (!args.some((arg) => arg.includes("--loglevel"))) {
+if (!args.some((arg) => arg.includes("--log-level"))) {
   // hide affected files from the console by default
-  prettierArguments.push("--loglevel=warn");
+  prettierArguments.push("--log-level=warn");
 }
 
 // write vs. list

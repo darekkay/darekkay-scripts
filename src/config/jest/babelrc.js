@@ -26,6 +26,6 @@ module.exports = () => ({
   plugins: [
     // Enable class fields proposal
     // https://github.com/tc39/proposal-class-fields
-    [require.resolve("@babel/plugin-proposal-class-properties")],
+    [require.resolve("@babel/plugin-transform-class-properties")],
   ],
 });

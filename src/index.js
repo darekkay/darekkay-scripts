@@ -11,7 +11,7 @@ const scriptsGlobPattern = path
   .join("/");
 
 const availableScripts = new Set(
-  globSync(scriptsGlobPattern).map((script) => path.basename(script, ".js"))
+  globSync(scriptsGlobPattern).map((script) => path.basename(script, ".js")),
 );
 
 if (process.argv.length < 3) {
@@ -40,7 +40,7 @@ const nodeArgs = scriptIndex > 0 ? args.slice(0, scriptIndex) : [];
 const result = spawn.sync(
   process.argv[0],
   [...nodeArgs, scriptPath, ...args.slice(scriptIndex + 1)],
-  { stdio: "inherit" }
+  { stdio: "inherit" },
 );
 
 function handleSignal(signal) {
@@ -48,13 +48,13 @@ function handleSignal(signal) {
     logger.error(
       `The script "${script}" failed because the process exited too early. ` +
         "This probably means the system ran out of memory or someone called " +
-        "`kill -9` on the process."
+        "`kill -9` on the process.",
     );
   } else if (signal === "SIGTERM") {
     logger.error(
       `The script "${script}" failed because the process exited too early. ` +
         "Someone might have called `kill` or `killall`, or the system could " +
-        "be shutting down."
+        "be shutting down.",
     );
   }
   process.exit(1);

@@ -28,7 +28,7 @@ const useBuiltinConfig =
 if (useBuiltinConfig) {
   jestArguments.push(
     "--config",
-    JSON.stringify(require("../config/jest.config"))
+    JSON.stringify(require("../config/jest.config")),
   );
 }
 

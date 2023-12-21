@@ -64,7 +64,7 @@ if (!args.includes("--no-cache")) {
   eslintArguments.push(
     "--cache",
     "--cache-location",
-    fromRoot("node_modules/.cache/.eslintcache")
+    fromRoot("node_modules/.cache/.eslintcache"),
   );
 }
 
