@@ -1,7 +1,7 @@
 {
   "name": "@darekkay/scripts",
   "description": "My shared project scripts",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "author": "Darek Kay <hello@darekkay.com> (https://darekkay.com/)",
   "bin": {
     "dks": "bin/dks.js"
