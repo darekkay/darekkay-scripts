@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("node:path");
 
 /**
  * A custom Jest transformer turning file imports into file names.
